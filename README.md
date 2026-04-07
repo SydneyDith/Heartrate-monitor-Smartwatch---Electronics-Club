@@ -56,5 +56,9 @@ The final schematic for Prototype 2 is shown below: (*see below the image for in
   <img src="./images/schemwatch.svg" width="100%">
 </p>
 
-To use the 328P's 8MHz internal clock, we were required to run the microcontroller at 3.3V, however, our LiPo was 4.2V-3.7V. To fix this, we simply included a 3.3V Low Dropout regulator (LDO) after the ON switch. 
+<p align="center">
+  <a href="./images/schem.pdf">📄 View Full Schematic (PDF)</a>
+</p>
+
+To use the 328P's 8MHz internal clock, we were required to run the microcontroller at 3.3V, however, our LiPo was 4.2V-3.7V. To fix this, we simply included a 3.3V Low Dropout regulator (LDO) (U2) after the ON switch. This reduced our input voltage to a clean 3.3V. Additionally, the MAX30102 operates at 1.8V, so we included a second LDO (U5) that reduced the 3.3V line to 1.8V which could be used for the pulse oximeter's input voltage. However, every other IC was powered by the 3.3V line. The I2C communication lines from the RTC and pulse oximeter required two 4.7k pull-up resistors to the 3.3V line as per the datasheets.
 
