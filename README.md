@@ -29,18 +29,19 @@ The image above shows the first prototype of our Smartwatch. This version was ba
 | **Timekeeping** | RTC (Real-Time Clock) | <img src="images/DS3231.jpg" width="200">|
 | **Power System** | Rechargeable LiPo |<img src="images/lipo.jpg" width="200"> |
 
-To turn our bread board prototype into something that resembeled a watch, we soldered the modules together trying to keep wires as short as possible. The following video shows the result:
-
-
-https://github.com/user-attachments/assets/febb02ad-0546-478b-9966-6aa6d14cd212
-
-t
-
+### Pulse Sensors Issues
 The OLED display shows time, date, and current heartrate reading. Team 2 was able to program the Pro Micro to read from the RTC module and pulse sensor then display the results on the OLED. The pulse sensor results fluctuated quite a bit. After some research, we attributed this to the quality of the sensor itself. Many cheap pulse sensors use a method called photoplethysmography (PPG) to measure the change in blood volume in your capillaries as you heart beats. The pulse sensor module uses a green LED to shine light into the capillaries and a photodetector to measure how much light is reflected back. Ideally, the pulse sensor can translate this information into an accurate heart rate reading. PPG is cheap, however, its very sensitive to real world motion, ambient light interference and sensor contact. 
 [*references*](https://www.sciencedirect.com/topics/engineering/sensor-pulse#:~:text=A%20pulse%20sensor%20is%20defined,Arduino%20for%20health%20monitoring%20applications.)
 
 More accurate pulse sensors (professional grade) cost hundreds or thousands of dollars. Luckily, there is a cheaper PPG option, the MAX30102, that uses multi-wavelngth LEDs and has an on board processing IC. It also includes Sp02 readings as an added feature. We later decided to switch to the MAX30102 pulse oximeter to replace the pulse sensor module.
 
+### First Prototype
+To turn our bread board prototype into something that resembeled a watch, we soldered the modules together trying to keep wires as short as possible. The following video shows the result:
+
+
+<video src="https://github.com/user-attachments/assets/febb02ad-0546-478b-9966-6aa6d14cd212" width="400" controls></video>
+
+During this stage of the design process, my team and I realized that size was going to be our our main constraint. The form factor shown above is ridiculously large to be comfortably worn on the wrist. After the 3D printed housing, my team and I estimated our first prototype's dimensions would be around 45mm x 45mm x 50mm, which would better be used as a desk clock. After doing more research and conversing amongst ourselves and with our peers, we decided to create a custom PCB that would eliminate many of the unecessary functions our sensor modules included. For example, the Pro Micro included headers for every I/O pin, only ~5 of which were essential. The DS3231 RTC module included alarm and 32kHz square wave output functionalities that were out of the scope of this project. By creating a custom PCB, we could limit unecessary functionalities of our modules, reducing size and creating a more ergonomic design.
 
 
 
