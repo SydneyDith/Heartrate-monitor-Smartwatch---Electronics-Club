@@ -49,8 +49,7 @@ Although we decided to transition to the MAX30102 pulse oximeter, our proof of c
 
 To minimize the size of our PCB, we only wanted to include functionalities that were (for the most part) strictly necessary for our smartwatch. We would essentially be stripping the modules from our prototype and putting everything on one PCB. First, we researched the bare minimum requirements for the ATmega328P microcontroller. Using the microcontroller's datasheet and online resources, we were able to dumb the circuit down to a few capacitors and a pull-up resistor. There was an optional 16MHz external crystal oscillator that was typically used with the 328P, however, these clock speeds wouldn't be necessary for our use case. We could instead use the 8MHz internal oscillator. We used similar techniques to reduce the size of our RTC and sensor modules. 
 
-
-
+<img src="images/schem.pdf" width="900">
 
 To use the 328P's 8MHz internal clock, we were required to run the microcontroller at 3.3V, however, our LiPo was 4.2V-3.7V. To fix this, we simply included a 3.3V Low Dropout regulator (LDO) after the ON switch. 
 
