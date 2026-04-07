@@ -51,5 +51,6 @@ To minimize the size of our PCB, we only wanted to include functionalities that 
 
 
 
+
 To use the 328P's 8MHz internal clock, we were required to run the microcontroller at 3.3V, however, our LiPo was 4.2V-3.7V. To fix this, we simply included a 3.3V Low Dropout regulator (LDO) after the ON switch. 
 
