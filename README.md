@@ -48,11 +48,13 @@ During this stage of the design process, my team and I realized that size was go
 
 Although we decided to transition to the MAX30102 pulse oximeter, our proof of concept was still valid as we are only replacing the pulse sensor and there are countless resources online showing the MAX30102's compatibility with the 328P. With this, we decided to move forward into PCB design for our second prototype.
 
-To minimize the size of our PCB, we only wanted to include functionalities that were (for the most part) strictly necessary for our smartwatch. We would essentially be stripping the modules from our prototype and putting everything on one PCB. First, we researched the bare minimum requirements for the ATmega328P microcontroller. Using the microcontroller's datasheet and online resources, we were able to dumb the circuit down to a few capacitors and a pull-up resistor. There was an optional 16MHz external crystal oscillator that was typically used with the 328P, however, these clock speeds wouldn't be necessary for our use case. We could instead use the 8MHz internal oscillator. We used similar techniques to reduce the size of our RTC and sensor modules. 
+To minimize the size of our PCB, we only wanted to include functionalities that were (for the most part) strictly necessary for our smartwatch. We would essentially be stripping the modules from our prototype and putting everything on one PCB. First, we researched the bare minimum requirements for the ATmega328P microcontroller. Using the microcontroller's datasheet and online resources, we were able to dumb the circuit down to a few capacitors and a pull-up resistor. There was an optional 16MHz external crystal oscillator that was typically used with the 328P, however, these clock speeds wouldn't be necessary for our use case. We could instead use the 8MHz internal oscillator. We used similar techniques to reduce the size of our RTC and sensor modules.
 
-| ![System Schematic](./images/schem.svg) |
-| :---: |
-| *Figure 2: System Schematic for the Smartwatch Heart Monitor* |
+The final schematic for Prototype 2 is shown below: (*see below the image for indepth detail about the schematic*)
+
+<p align="center">
+  <img src="./images/schemwatch.svg" width="100%">
+</p>
 
 To use the 328P's 8MHz internal clock, we were required to run the microcontroller at 3.3V, however, our LiPo was 4.2V-3.7V. To fix this, we simply included a 3.3V Low Dropout regulator (LDO) after the ON switch. 
 
