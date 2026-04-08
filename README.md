@@ -8,7 +8,7 @@ This project was seperated into two teams. Team 1 specialized in hardware develo
 | Feature | Description | Goal |
 | :--- | :--- | :--- |
 | **Heart Rate Monitor** | Integrate Pulse Sensor | Provides accurate heartrate measurments. |
-| **OLED Display** | SSD1306 OLED Display | Clear visual output for biometric data and time. |
+| **OLED Display** | 1.3" SSH1106 OLED Display | Clear visual output for biometric data and time. |
 | **Timekeeping** | RTC (Real-Time Clock) | Maintain precise time and date. |
 | **Power System** | Rechargeable LiPo | Provides rechargeable power. |
 
@@ -38,8 +38,9 @@ More accurate pulse sensors (professional grade) cost hundreds or thousands of d
 ### First Prototype
 To turn our bread board prototype into something that resembeled a watch, we soldered the modules together trying to keep wires as short as possible. The following video shows the result:
 
-
-<video src="https://github.com/user-attachments/assets/febb02ad-0546-478b-9966-6aa6d14cd212" width="400" controls></video>
+| Top View | Side View 1 | Side View 2 | Video |
+| :---: | :---: | :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/10347099-f720-44bf-9783-0d0b4bf888c9" width="800"> | <img src="https://github.com/user-attachments/assets/75071edf-7dd1-43b0-bb67-328769494b64" width="800"> | <img src="https://github.com/user-attachments/assets/825c2f36-4ead-4791-8fb2-6e5bfd517968" width="800"> | <video src="https://github.com/user-attachments/assets/febb02ad-0546-478b-9966-6aa6d14cd212" width="120" controls></video> |
 
 During this stage of the design process, my team and I realized that size was going to be our our main constraint. The form factor shown above is ridiculously large to be comfortably worn on the wrist. After the 3D printed housing, my team and I estimated our first prototype's dimensions would be around 45mm x 45mm x 50mm, which would better be used as a desk clock. After doing more research and conversing amongst ourselves and with our peers, we decided to create a custom PCB that would eliminate many of the unecessary functions our sensor modules included. For example, the Pro Mini included headers for every I/O pin, only ~5 of which were essential and the DS3231 RTC module included alarm and 32kHz square wave output functionalities that were out of the scope of this project. By creating a custom PCB, we could limit unecessary functions of our modules, reducing size and creating a more ergonomic design.
 
@@ -76,7 +77,9 @@ Final PCB design: (46mm x 39mm x 5mm)
   <img src="./images/smartwatchpcb.PNG" width="90%">
 </p>
 
-
+| Front PCB view (*OLED will be connected to the 4 pinheaders*) | Back PCB view |
+| :---: | :---: |
+| ![PCB Render 2](images/pcbrender2.PNG) | ![PCB Render 1](images/pcbrender1.PNG) |
 
 
 
