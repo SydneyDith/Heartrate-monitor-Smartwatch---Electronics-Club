@@ -23,7 +23,7 @@ The image above shows the first prototype of our Smartwatch. This version was ba
 
 | Feature | Part Name | Image |
 | :--- | :--- | :--- |
-| **Microcontroller** | Arduino Pro Mini | <img src="images/arduinopromicro.jpg" width="200"> |
+| **Microcontroller** | Arduino Pro Mini | <img src="images/arduinopromini.jpg" width="200"> |
 | **Heart Rate Monitor** | Integrate Pulse Sensor | <img src="images/pulsesensor.jpg" width="200">|
 | **OLED Display** | OLED Display | <img src="images/oled.jpg" width="200"> |
 | **Timekeeping** | RTC (Real-Time Clock) | <img src="images/DS3231.jpg" width="200">|
