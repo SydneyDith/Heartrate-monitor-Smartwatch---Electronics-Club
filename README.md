@@ -7,7 +7,7 @@ This project was separated into two teams. Team 1 specialized in hardware develo
 
 | Feature | Description | Goal |
 | :--- | :--- | :--- |
-| **Heart Rate Monitor** | Integrate Pulse Sensor | Provides accurate heart rate measurements. |
+| **Heart Rate Monitor** | Integrate Pulse Sensor | Provides heart rate measurements. |
 | **OLED Display** | 1.3" SH1106 OLED Display | Clear visual output for biometric data and time. |
 | **Timekeeping** | RTC (Real-Time Clock) | Maintain precise time and date. |
 | **Power System** | Rechargeable LiPo | Provides rechargeable power. |
