@@ -68,7 +68,7 @@ We also included 4 pin headers: I2C clock, I2C data, +3.3V, and GND for the SSD1
 Since there is no longer a micro usb port on our microcontroller (like the Pro Mini), we must use a [USB to Serial Converter](https://www.amazon.com/NOYITO-CP2102-Converter-Downloader-Arduino/dp/B07D54K82D) so we can connect and upload code to the 328P using UART communication. 
 
 Upon doing further research on the microcontroller, we encountered a problem. Factory new ATmega328P chips often do not come with a pre-installed bootloader. The bootloader is an essential piece of software that allows the microcontroller to communicate via UART. Without UART communication, we would not be able to upload our code using the USB to serial converter. We researched methods to solve this issue. We found a process called In-System Programming (ISP) that requries an Arduino to flash the bootloader onto a blank ATmega328P. To do this we simply created 4 more pin headers that connected to specific pins on the 328P. These were: MOSI, MISO, SCK, and RESET. Using these four SPI pins alongside +3.3V, and GND, we could successfully bootload the chip using an external Arduino Nano allowing us to program through UART communication.
-[View PDF](images/Smartwatch%20Bootloader%20Procedure.pdf).
+[Bootloader Procedure (PDF)](images/Smartwatch%20Bootloader%20Procedure.pdf).
 
 ## PCB Design
 
