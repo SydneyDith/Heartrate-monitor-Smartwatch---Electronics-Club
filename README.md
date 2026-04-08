@@ -70,4 +70,12 @@ Upon doing further research on the microcontroller, we encountered a problem. Fa
 
 ## PCB Design
 
+Final PCB design: (46mm x 39mm x 5mm)
+<p align="center">
+  <img src="./images/smartwatchpcb.PNG" width="90%">
+</p>
+
+
+
+
 
