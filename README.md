@@ -82,5 +82,28 @@ Final PCB design: (46mm x 39mm x 5mm)
 | :---: | :---: |
 | ![PCB Render 2](images/pcbrender2.PNG) | ![PCB Render 1](images/pcbrender1.PNG) |
 
+The images and 3D renders above show the final PCB design for Prototype 2. Now I plan to move on to the assembly phase when the PCB and components arrive in the coming weeks.
+## TO DO
 
-
+- [ ] **Bootload the ATmega328P**
+    - Follow the [bootloader procedure](images/Smartwatch%20Bootloader%20Procedure.pdf)
+    - Ensure the microcontroller communicates via UART
+    - Test Blink sketch with on-board LED
+- [ ] **Initial Soldering & Assembly**
+    - Solder MAX30102 and coin cell battery using a heat gun
+    - Assemble the remainder of the PCB
+    - Verify MAX30102 has a clear line of sight to the user's skin
+- [ ] **Sensor Testing**
+    - [ ] Pulse Oximeter: Verify accurate heart rate/SpO2 readings
+    - [ ] OLED: Ensure proper display rendering
+    - [ ] RTC: Confirm accurate timekeeping
+- [ ] **Power System Setup**
+    - Integrate LiPo battery and external charging circuit
+- [ ] **Performance Testing**
+    - [ ] Heart rate accuracy
+    - [ ] Battery life duration
+    - [ ] Charge time verification
+- [ ] **Housing**
+    - Design 3D printed enclosure
+- [ ] **Interpret Tests**
+    - Document changes for Prototype 3
