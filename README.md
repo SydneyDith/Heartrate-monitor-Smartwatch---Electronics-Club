@@ -25,7 +25,7 @@ The image above shows the first prototype of our Smartwatch. This version was ba
 | :--- | :--- | :--- |
 | **Microcontroller** | Arduino Pro Mini | <img src="images/arduinopromicro.jpg" width="200"> |
 | **Heart Rate Monitor** | Integrate Pulse Sensor | <img src="images/pulsesensor.jpg" width="200">|
-| **OLED Display** | OLED Display | <img src="images/oled.png" width="200"> |
+| **OLED Display** | OLED Display | <img src="images/oled.jpg" width="200"> |
 | **Timekeeping** | RTC (Real-Time Clock) | <img src="images/DS3231.jpg" width="200">|
 | **Power System** | Rechargeable LiPo |<img src="images/lipo.jpg" width="200"> |
 
@@ -71,6 +71,7 @@ Upon doing further research on the microcontroller, we encountered a problem. Fa
 ## PCB Design
 
 Final PCB design: (46mm x 39mm x 5mm)
+
 <p align="center">
   <img src="./images/smartwatchpcb.PNG" width="90%">
 </p>
