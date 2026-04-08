@@ -14,7 +14,7 @@ This project was separated into two teams. Team 1 specialized in hardware develo
 
 Throughout every iteration of this project we may have moved forward with different components that better fit our needs, however, the 4 underlying features above were included in every version of this project. 
 
-## Proof of Concept
+## Proof of Concept: ***May 2025***
 
 <img src="images/ProofofConcept.JPG" width="500">
 
@@ -35,7 +35,7 @@ The OLED display shows time, date, and current heart rate reading. Team 2 was ab
 
 More accurate pulse sensors (professional grade) cost hundreds or thousands of dollars. Luckily, there is a cheaper PPG option, the MAX30102, that uses multi-wavelength LEDs and has an on-board processing IC. It also includes SpO2 readings as an added feature. We later decided to switch to the MAX30102 pulse oximeter to replace the pulse sensor module.
 
-### First Prototype
+### First Prototype: ***May 2025***
 To turn our breadboard prototype into something that resembled a watch, we soldered the modules together trying to keep wires as short as possible. The following video shows the result:
 
 | Top View | Side View 1 | Side View 2 | Video |
@@ -44,7 +44,7 @@ To turn our breadboard prototype into something that resembled a watch, we solde
 
 During this stage of the design process, my team and I realized that size was going to be our main constraint. The form factor shown above is ridiculously large to be comfortably worn on the wrist. After the 3D printed housing, my team and I estimated our first prototype's dimensions would be around 45mm x 45mm x 50mm, which would better be used as a desk clock. After doing more research and conversing amongst ourselves and with our peers, we decided to create a custom PCB that would eliminate many of the unnecessary functions our sensor modules included. For example, the Pro Mini included headers for every I/O pin, only ~5 of which were essential and the DS3231 RTC module included alarm and 32kHz square wave output functionalities that were out of the scope of this project. By creating a custom PCB, we could limit unnecessary functions of our modules, reducing size and creating a more ergonomic design.
 
-## Schematic Design
+## Schematic Design: ***February 2026***
 
 
 Although we decided to transition to the MAX30102 pulse oximeter, our proof of concept was still valid as we are only replacing the pulse sensor and there are countless resources online showing the MAX30102's compatibility with the 328P. With this, we decided to move forward into PCB design for our second prototype.
@@ -70,7 +70,7 @@ Since there is no longer a Micro USB port on our microcontroller (like the Pro M
 Upon doing further research on the microcontroller, we encountered a problem. Factory new ATmega328P chips often do not come with a pre-installed bootloader. The bootloader is an essential piece of software that allows the microcontroller to communicate via UART. Without UART communication, we would not be able to upload our code using the USB to serial converter. We researched methods to solve this issue. We found a process called In-System Programming (ISP) that requires an Arduino to flash the bootloader onto a blank ATmega328P. To do this we simply created 4 more pin headers that connected to specific pins on the 328P. These were: MOSI, MISO, SCK, and RESET. Using these four SPI pins alongside +3.3V, and GND, we could successfully bootload the chip using an external Arduino Nano allowing us to program through UART communication.
 [Bootloader Procedure (PDF)](images/Smartwatch%20Bootloader%20Procedure.pdf).
 
-## PCB Design
+## PCB Design: ***April 2026***
 
 Final PCB design: (46mm x 39mm x 5mm)
 
